@@ -75,6 +75,30 @@ const [a,b,c]=newarr2;
 let newarr3=[3,4,2]
 let copy=[...newarr3]
 
-console.log(copy)
+// console.log(copy)
+
+const newArr3=[1,2,3,4,5];
+
+// newArr3.forEach(function(value){
+//        console.log(value);
+// });
 
 
+// let doubled=newArr3.map(function(value){
+//     return value*2;
+// })
+
+// console.log(doubled);
+
+
+// let result2=newArr3.filter(function(value){
+//     return value>2;
+// })
+// console.log(result2)
+
+
+// let ans=newArr3.reduce(function(accu,key){
+//     return accu+key;
+// },0);
+
+// console.log(ans);
