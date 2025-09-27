@@ -1,0 +1,122 @@
+
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa4b2;
+      --accent: #2dd4bf;
+      --glass: rgba(255,255,255,0.03);
+      --radius: 14px;
+      --maxw: 900px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071021 0%,#081226 60%);
+      color:#e6eef6;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+
+    .app{
+      width:100%;
+      max-width:var(--maxw);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    .heading{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:46px;
+      height:46px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;color:#012;
+      box-shadow:0 6px 18px rgba(45,212,191,0.08);
+    }
+    h1{font-size:18px;margin:0}
+    p.lead{margin:0;color:var(--muted);font-size:13px}
+
+    /* Search bar */
+    .search-row{
+      display:flex;gap:12px;margin-top:18px;margin-bottom:22px;
+    }
+    .search-row .input{
+      flex:1;display:flex;align-items:center;background:var(--glass);padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);
+    }
+    .search-row input[type="text"]{
+      width:100%;background:transparent;border:0;color:inherit;font-size:15px;outline:none;
+    }
+    .btn{
+      background:linear-gradient(180deg,var(--accent),#34d399);
+      color:#012;padding:10px 16px;border-radius:12px;border:none;font-weight:600;cursor:pointer;box-shadow:0 6px 20px rgba(45,212,191,0.12);
+    }
+    .btn:active{transform:translateY(1px)}
+
+    .layout{
+      width: 50%;
+      
+      gap:20px;
+      align-items:center;
+      justify-content: center; 
+    }
+
+    /* Profile card */
+    .profile{
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);
+      display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;
+    }
+    .avatar{
+      width:120px;height:120px;border-radius:16px;background:rgba(255,255,255,0.03);display:inline-block;overflow:hidden;border:1px solid rgba(255,255,255,0.04);
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{font-size:18px;font-weight:700}
+    .handle{color:var(--muted);font-size:13px}
+    .bio{color:var(--muted);font-size:13px;margin-top:6px}
+
+    .meta{display:flex;gap:10px;margin-top:12px}
+    .meta .item{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,0.01);min-width:84px}
+    .meta .num{font-weight:700}
+    .company{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:13px;margin-top:8px}
+
+    /* Repos list */
+    .repos{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));padding:18px;border-radius:14px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .repo{display:flex;flex-direction:column;
+      padding:12px;border-radius:10px;margin-bottom:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02)}
+    .repo h4{margin:0;font-size:15px}
+    .repo p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .repo .meta{margin-top:8px}
+
+    .no-result{padding:20px;text-align:center;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:800px){
+      .layout{grid-template-columns:1fr;}
+      .avatar{width:96px;height:96px}
+    }
+
+    /* loading skeleton */
+    .skeleton{background:linear-gradient(90deg,rgba(255,255,255,0.03),rgba(255,255,255,0.06),rgba(255,255,255,0.03));animation:pulse 1.4s infinite}
+    @keyframes pulse{0%{opacity:1}50%{opacity:0.5}100%{opacity:1}}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .hidden{display:none}
